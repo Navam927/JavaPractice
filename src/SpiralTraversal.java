@@ -1,5 +1,5 @@
 public class SpiralTraversal {
-    public static void spiralOrder(int[][] matrix) {
+    public static void  spiralOrder(int[][] matrix) {
         if (matrix == null || matrix.length == 0) return;
 
         int top = 0;
