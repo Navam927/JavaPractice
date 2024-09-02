@@ -1,0 +1,46 @@
+Here's a problem statement for a "Circle" and "ResizableCircle" class:
+
+### Problem Statement:
+
+You are required to implement two classes: `Circle` and `ResizableCircle`.
+The `Circle` class represents a basic geometric circle with certain properties,
+and the `ResizableCircle` class extends the `Circle` class, allowing the circle to be resized.
+
+#### 1. **Circle Class:**
+   - **Attributes:**
+     - `radius`: A double representing the radius of the circle.
+   - **Methods:**
+     - `getRadius()`: Returns the radius of the circle.
+     - `getArea()`: Returns the area of the circle, calculated using the formula \( \text{Area} = \pi \times \text{radius}^2 \).
+     - `getPerimeter()`: Returns the perimeter (circumference) of the circle, calculated using the formula \( \text{Perimeter} = 2 \times \pi \times \text{radius} \).
+     - `toString()`: Returns a string representation of the circle in the format `"Circle[radius=radius]"`.
+
+#### 2. **ResizableCircle Class (Subclass of Circle):**
+   - **Attributes:**
+     - Inherits the `radius` attribute from the `Circle` class.
+   - **Methods:**
+     - Inherits all methods from the `Circle` class.
+     - `resize(percent)`: Resizes the circle by increasing or decreasing the radius by the given percentage (where `percent` is a double).
+     For example, if the `percent` is 50, the radius should increase by 50%, and if `percent` is -25, the radius should decrease by 25%.
+
+### Example:
+```java
+Circle c1 = new Circle(5.0);
+System.out.println(c1.getArea());       // Output: 78.53981633974483
+System.out.println(c1.getPerimeter());  // Output: 31.41592653589793
+System.out.println(c1.toString());      // Output: Circle[radius=5.0]
+
+ResizableCircle rc1 = new ResizableCircle(5.0);
+rc1.resize(50);  // Increase radius by 50%
+System.out.println(rc1.getArea());       // Output: 176.71458676442586
+System.out.println(rc1.getPerimeter());  // Output: 49.08738521234052
+System.out.println(rc1.toString());      // Output: Circle[radius=7.5]
+```
+
+### Requirements:
+- The `Circle` class should encapsulate the radius and provide methods to interact with it.
+- The `ResizableCircle` class should inherit from `Circle` and add functionality to resize the circle.
+- Use the `Math.PI` constant for the value of π in calculations.
+
+### Implementation:
+Implement the `Circle` and `ResizableCircle` classes in Java, ensuring that they meet the specifications given above.

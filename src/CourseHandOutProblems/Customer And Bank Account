@@ -1,0 +1,59 @@
+Here's a problem statement for a "Customer" and "BankAccount" class:
+
+### Problem Statement:
+
+You are required to implement two classes: `Customer` and `BankAccount`.
+The `Customer` class represents a customer with personal details, and the `BankAccount`
+class represents a bank account associated with a specific customer.
+The classes should interact to simulate basic banking operations.
+
+#### 1. **Customer Class:**
+   - **Attributes:**
+     - `id`: An integer representing the unique customer ID.
+     - `name`: A string representing the customer's name.
+     - `email`: A string representing the customer's email address.
+     - `phoneNumber`: A string representing the customer's phone number.
+   - **Methods:**
+     - `getId()`: Returns the customer's ID.
+     - `getName()`: Returns the customer's name.
+     - `getEmail()`: Returns the customer's email address.
+     - `getPhoneNumber()`: Returns the customer's phone number.
+     - `setEmail(newEmail)`: Updates the customer's email address with the provided `newEmail`.
+     - `setPhoneNumber(newPhoneNumber)`: Updates the customer's phone number with the provided `newPhoneNumber`.
+     - `toString()`: Returns a string representation of the customer in the format `"Customer[id=id, name=name, email=email, phoneNumber=phoneNumber]"`.
+
+#### 2. **BankAccount Class:**
+   - **Attributes:**
+     - `accountNumber`: An integer representing the unique bank account number.
+     - `customer`: A `Customer` object representing the account holder.
+     - `balance`: A double representing the current balance in the account.
+   - **Methods:**
+     - `getAccountNumber()`: Returns the bank account number.
+     - `getCustomer()`: Returns the `Customer` object associated with the account.
+     - `getBalance()`: Returns the current balance in the account.
+     - `deposit(amount)`: Adds the specified `amount` to the account balance.
+     - `withdraw(amount)`: Deducts the specified `amount` from the account balance, if sufficient funds are available. If not, it should display an error message.
+     - `toString()`: Returns a string representation of the bank account in the format `"BankAccount[accountNumber=accountNumber, customer=Customer[id=id, name=name, email=email, phoneNumber=phoneNumber], balance=balance]"`.
+
+### Example:
+```java
+Customer cust1 = new Customer(101, "John Doe", "john@example.com", "555-1234");
+BankAccount acc1 = new BankAccount(1001, cust1, 500.00);
+
+System.out.println(acc1.getBalance());   // Output: 500.0
+acc1.deposit(200.00);
+System.out.println(acc1.getBalance());   // Output: 700.0
+acc1.withdraw(100.00);
+System.out.println(acc1.getBalance());   // Output: 600.0
+
+System.out.println(acc1.toString());     // Output: BankAccount[accountNumber=1001, customer=Customer[id=101, name=John Doe, email=john@example.com, phoneNumber=555-1234], balance=600.0]
+```
+
+### Requirements:
+- The `Customer` class should encapsulate the personal details of a customer and provide methods to access and update them.
+- The `BankAccount` class should manage the balance for a specific customer and allow deposits and withdrawals.
+- Ensure that withdrawal operations check for sufficient funds before proceeding.
+- Implement the `toString()` methods to return a string representation of both the `Customer` and `BankAccount` objects.
+
+### Implementation:
+Implement the `Customer` and `BankAccount` classes in Java, ensuring that they meet the specifications given above.
