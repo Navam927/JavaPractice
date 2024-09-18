@@ -1,0 +1,35 @@
+The "Greetings in Reverse" problem can be described as follows:
+
+### Problem Statement:
+You are given a list of names as input. For each name, you need to reverse the order of the letters within that name and then print the reversed names in the same order as they were given.
+
+### Input:
+- The first line contains an integer **N**, which is the number of names.
+- The next **N** lines each contain a name consisting of uppercase and lowercase English letters.
+
+### Output:
+- For each name, print the reversed version of that name on a new line.
+
+### Constraints:
+- \( 1 \leq N \leq 1000 \)
+- Each name will have at least 1 and at most 100 characters.
+
+### Example:
+
+#### Input:
+```
+3
+Alice
+Bob
+Charlie
+```
+
+#### Output:
+```
+ecilA
+boB
+eilrahC
+```
+
+### Explanation:
+For the input names "Alice", "Bob", and "Charlie", the program should reverse them and print "ecilA", "boB", and "eilrahC", respectively, each on a new line.
